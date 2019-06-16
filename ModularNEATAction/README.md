@@ -1,22 +1,22 @@
 ## Action Game + NEAT + Modular Network ##
 
-アクションゲーム学習におけるモジュラーネットワークの導入にて使用したプログラム。
-アクションゲームの基盤の作成には以下を基としたが,ゲーム内で使われる画像は独自に描いた(自機はデザインを参考にした)。
-["Github aidiary/pygame/tree/master/action"](https://github.com/aidiary/pygame/tree/master/action)
-動作にはpygameとneat-python(と,それらの依存関係のプログラム)が必要。
-これらの実行にあたっては,python3.6.5,pygame 1.9.5,neat-python-0.92を想定している。
+アクションゲーム学習におけるモジュラーネットワークの導入にて使用したプログラム。  
+アクションゲームの基盤の作成には以下を基としたが,ゲーム内で使われる画像は独自に描いた(自機はデザインを参考にした)。  
+["Github aidiary/pygame/tree/master/action"](https://github.com/aidiary/pygame/tree/master/action)  
+動作にはpygameとneat-python(と,それらの依存関係のプログラム)が必要。  
+これらの実行にあたっては,python3.6.5,pygame 1.9.5,neat-python-0.92を想定している。  
 
-## プログラム,フォルダーとそれらの仕様について ##
+## プログラム,フォルダーとそれらの仕様について ##  
 
-'snakecheck.py':実際にアクションゲームを遊ぶ場合に起動。
-'snaketrain2.py':アクションゲームを学習させる際に,訓練環境として使用(画面が出ず,キー入力を受け付けない事以外は,snakecheckとほとんど同じ…筈。)
-* 'evolve-...のファイル群':ネットワークを進化させる際に使用。
-    -easyenemystage.py:15種類の内比較的難易度が低いとみなされた10個のエネミーステージを学習する。
-    -easyjumpstage.py:15種類の内比較的難易度が低いとみなされた10個のジャンプステージを学習する。
-    -singleenemy.py:15種類のエネミーステージの内,一つのステージだけを学習する。
-    -singlejump.py:15種類のジャンプステージの内,一つのステージだけを学習する。
-    -jumpstate:15種類のジャンプステージをランダムな順序で学習する。
-    -enemystage:15種類のエネミーステージをランダムな順序で学習する。
+'snakecheck.py':実際にアクションゲームを遊ぶ場合に起動。  
+'snaketrain2.py':アクションゲームを学習させる際に,訓練環境として使用(画面が出ず,キー入力を受け付けない事以外は,snakecheckとほとんど同じ…筈。)  
+* 'evolve-...のファイル群':ネットワークを進化させる際に使用。  
+    -easyenemystage.py:15種類の内比較的難易度が低いとみなされた10個のエネミーステージを学習する。  
+    -easyjumpstage.py:15種類の内比較的難易度が低いとみなされた10個のジャンプステージを学習する。  
+    -singleenemy.py:15種類のエネミーステージの内,一つのステージだけを学習する。  
+    -singlejump.py:15種類のジャンプステージの内,一つのステージだけを学習する。  
+    -jumpstate:15種類のジャンプステージをランダムな順序で学習する。  
+    -enemystage:15種類のエネミーステージをランダムな順序で学習する。  
     -multistage:難易度の高いステージを一つ指定し,evolve-enemystage.pyとevolve-jumpstage.pyで作成したネットワークをモジュラーネットワークとして学習する。
     -multistageeasy:難易度の高いステージを一つ指定し,evolve-easyenemystage.pyとevolve-easyumpstage.pyで作成したネットワークをモジュラーネットワークとして学習する。
     -multistagesingle:難易度の高いステージを一つ指定し,evolve-singleenemy.pyとevolve-singlejump.pyで作成したネットワークをモジュラーネットワークとして学習する。
