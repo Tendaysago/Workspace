@@ -18,7 +18,8 @@
     -singlejump.py:15種類のジャンプステージの内,一つのステージだけを学習する。  
     -jumpstate:15種類のジャンプステージをランダムな順序で学習する。  
     -enemystage:15種類のエネミーステージをランダムな順序で学習する。  
-    -multistage:難易度の高いステージを一つ指定し,evolve-enemystage.pyとevolve-jumpstage.pyで作成したネットワークをモジュラーネットワークとして学習する。  
+    -multistage:難易度の高いステージを一つ指定し,  
+    evolve-enemystage.pyとevolve-jumpstage.pyで作成したネットワークをモジュラーネットワークとして学習する。  
     -multistageeasy:難易度の高いステージを一つ指定し,  
     evolve-easyenemystage.pyとevolve-easyumpstage.pyで作成したネットワークをモジュラーネットワークとして学習する。  
     -multistagesingle:難易度の高いステージを一つ指定し,  
