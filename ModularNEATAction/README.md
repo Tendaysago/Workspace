@@ -19,8 +19,10 @@
     -jumpstate:15種類のジャンプステージをランダムな順序で学習する。  
     -enemystage:15種類のエネミーステージをランダムな順序で学習する。  
     -multistage:難易度の高いステージを一つ指定し,evolve-enemystage.pyとevolve-jumpstage.pyで作成したネットワークをモジュラーネットワークとして学習する。  
-    -multistageeasy:難易度の高いステージを一つ指定し,evolve-easyenemystage.pyとevolve-easyumpstage.pyで作成したネットワークをモジュラーネットワークとして学習する。  
-    -multistagesingle:難易度の高いステージを一つ指定し,evolve-singleenemy.pyとevolve-singlejump.pyで作成したネットワークをモジュラーネットワークとして学習する。  
+    -multistageeasy:難易度の高いステージを一つ指定し,  
+    evolve-easyenemystage.pyとevolve-easyumpstage.pyで作成したネットワークをモジュラーネットワークとして学習する。  
+    -multistagesingle:難易度の高いステージを一つ指定し,  
+    evolve-singleenemy.pyとevolve-singlejump.pyで作成したネットワークをモジュラーネットワークとして学習する。  
     -multi-normalneat:難易度の高いステージを一つ指定し,evolve-enemystageなど同じ設定で,普通にNEATによる学習を行う。  
 'snakecheckAutoplay.py':進化させたエネミーネットワーク,ジャンプネットワークによってどのようなプレイになるか確認する為に使用。  
 'snakecheckAutoplay_multi.py':難しいステージに対して,モジュラーネットワークを導入した結果どのようなプレイになるか確認する為に使用。  
@@ -49,6 +51,8 @@
 
 ## TO DO##  
 ・ゲームオブジェクトの種類の追加  
-・evolve-...ファイルでステージクリアまで学習できたネットワークが,snakeAutoplay.pyで確認した場合に,途中でゲームオーバーになる事がある不具合への対処。  
+・evolve-...ファイルでステージクリアまで学習できたネットワークが,  
+snakeAutoplay.pyで確認した場合に,途中でゲームオーバーになる事がある不具合への対処。  
 ・より多様なステージの追加  
-・evolve-multi...シリーズで使用するモジュラーネットワークを丸ごとソースコード内に書いている為,使用するモジュラーネットワークの指定などの機能の追加。  
+・evolve-multi...シリーズで使用するモジュラーネットワークを丸ごとソースコード内に書いている為,  
+使用するモジュラーネットワークの指定などの機能の追加。  
