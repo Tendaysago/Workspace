@@ -1,12 +1,6 @@
-#include<iostream>
-#include<vector>
-#include<string>
-#include<cstring>
-#include<iomanip>
-#include<algorithm>
-#include<list>
-#include<queue>
-#include<set>
+#include<bits/stdc++.h>
+//橋の導出を行う
+//関節点の導出の時とやっていることはほとんど同じ!
 using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
@@ -33,10 +27,17 @@ void dfs(int current,int prev)
       parent[next]=current;
       dfs(next,current);
       lowest[current]=min(lowest[current],lowest[next]);
-      if(prenum[current]<lowest[next]) bridge.push_back(P(min(current,next),max(current,next)));
+      //関節点の導出との違いは下の部分.
+      //nextの親をcurrentとすると,prenum[current]<=lowest[next]なら
+      //nextは関節点となる話から,実際に大小判定を行なってnextが関節点になり得るか
+      //調べるだけ.
+      if(prenum[current]<lowest[next])
+	bridge.push_back(P(min(current,next),max(current,next)));
     }
     else if(next!=prev)
     {
+      //Back-Edgeになると言うことは,このcurrentとnextの間は橋にはならない.
+      //すでにnextが訪問済みであるということは,nextに向かう別のルートがあるからだ.
       lowest[current]=min(lowest[current],prenum[next]);
     }
   }
